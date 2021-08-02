@@ -12,7 +12,7 @@ class _ChatPageState extends State<ChatPage> {
 
   List<ChatModel> chats = [
     ChatModel(icon: 'person.svg',
-        name: 'Class of 201',
+        name: 'Class of 2021',
         currentMessage: 'Hello',
         isGroup: true,
         time: '23:40'),
