@@ -1,29 +1,49 @@
 import 'package:flutter/material.dart';
+import 'package:whatsappcloneassignment/pages/chat_pages.dart';
 
-class HomeScreen extends StatefulWidget{
+class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    _tabController=TabController(length: 4, vsync: this,initialIndex: 0);
+    _tabController = TabController(length: 4, vsync: this, initialIndex: 0);
   }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Whatsapp Clone'),
         actions: [
-          IconButton(onPressed:(){}, icon: Icon(Icons.search)),
-          IconButton(onPressed:(){}, icon: Icon(Icons.more_vert)),
-
+          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+          PopupMenuButton(
+              onSelected: (value){
+                print(value);
+              },itemBuilder: (BuildContext context) {
+            return [
+              PopupMenuItem(
+                child: Text("New Group"),
+                value: "New Group",
+              ),
+              PopupMenuItem(
+                child: Text("New Broadcast"),
+                value: "New Broadcast",
+              ),
+              PopupMenuItem(
+                child: Text("Web"),
+                value: "Web",
+              ),
+            ];
+          })
         ],
         bottom: TabBar(
-          controller:_tabController,
+          controller: _tabController,
           tabs: [
             Tab(
               icon: Icon(Icons.camera_alt),
@@ -40,7 +60,15 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           ],
         ),
       ),
-
+      body: TabBarView(
+        controller: _tabController,
+        children: [
+          Text('Camera'),
+          ChatPage(),
+          Text('Status'),
+          Text('Calls'),
+        ],
+      ),
     );
   }
 }
