@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:whatsappcloneassignment/model/chat_model.dart';
-import 'package:whatsappcloneassignment/pages/Receiveimage.dart';
-import 'package:whatsappcloneassignment/pages/Sendimage.dart';
-import 'package:whatsappcloneassignment/pages/receive.dart';
-import 'package:whatsappcloneassignment/pages/senders.dart';
+import '../Widgets/Receiveimage.dart';
+import '../Widgets/Sendimage.dart';
+import '../Widgets/receivemsg.dart';
+import '../Widgets/sendersmsg.dart';
 
 class PersonalChat extends StatefulWidget {
   final ChatModel chatModel;

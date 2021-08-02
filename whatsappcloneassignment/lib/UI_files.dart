@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:whatsappcloneassignment/model/chat_model.dart';
-import 'package:whatsappcloneassignment/pages/personalchatscreen.dart';
+import 'screens/personalchatscreen.dart';
 
 class CustomCard extends StatelessWidget {
   final ChatModel chatModel;

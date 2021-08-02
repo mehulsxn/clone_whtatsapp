@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappcloneassignment/pages/chat_pages.dart';
+import 'chat_pages.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
