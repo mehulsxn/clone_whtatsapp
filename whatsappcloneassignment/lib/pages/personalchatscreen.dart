@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:whatsappcloneassignment/model/chat_model.dart';
+import 'package:whatsappcloneassignment/pages/Receiveimage.dart';
+import 'package:whatsappcloneassignment/pages/Sendimage.dart';
+import 'package:whatsappcloneassignment/pages/receive.dart';
+import 'package:whatsappcloneassignment/pages/senders.dart';
 
 class PersonalChat extends StatefulWidget {
   final ChatModel chatModel;
@@ -116,7 +120,79 @@ class _PersonalChatState extends State<PersonalChat> {
             width: MediaQuery.of(context).size.width,
             child: Stack(
               children: [
-                ListView(),
+                Container(
+                  height: MediaQuery.of(context).size.height - 140,
+                  child: ListView(
+                    shrinkWrap: true,
+                    children: [
+                      SendMessage(
+                        message: 'Hello',
+                      ),
+                      ReceiveMessage(
+                        reply: 'Quite a long time everyone!',
+                      ),
+                      SendMessage(
+                        message: 'Finally man',
+                      ),
+                      ReceiveImage(),
+                      SizedBox(
+                        height: 3,
+                      ),
+                      ReceiveMessage(
+                        reply: 'Anyone know..where is sunil these days?',
+                      ),
+                      SendMessage(
+                        message: 'Yeah he shifted to USA in 2014',
+                      ),
+                      ReceiveMessage(
+                        reply: 'We are all grown up',
+                      ),
+                      SendMessage(
+                        message: 'Lets make a plan for reunion',
+                      ),
+                      ReceiveMessage(
+                        reply: 'Yeah we should def do it',
+                      ),
+                      SendMessage(
+                        message: 'yeah we can do that',
+                      ),
+                      ReceiveMessage(
+                        reply: 'I really miss college man',
+                      ),
+                      SendMessage(
+                        message: 'Yeah that was the best time',
+                      ),
+                      ReceiveMessage(
+                        reply: 'Covid made our life hell',
+                      ),
+                      SendMessage(
+                        message: 'Yes man thats all of us',
+                      ),
+                      ReceiveMessage(
+                        reply: 'I hope everything gets back to normal',
+                      ),
+                      SendMessage(
+                        message: 'YES',
+                      ),
+                      ReceiveMessage(
+                        reply: 'Then we can go for the GOA trip xD',
+                      ),
+                      SendMessage(
+                        message: 'HAHAHAH',
+                      ),
+                      SizedBox(
+                        height: 3,
+                      ),
+                      SendImage(),
+                      SizedBox(
+                        height: 3,
+                      ),
+                      ReceiveMessage(
+                        reply: 'LOLLLLL',
+                      ),
+                    ],
+                  ),
+                ),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Row(
