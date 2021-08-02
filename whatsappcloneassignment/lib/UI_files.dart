@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:whatsappcloneassignment/model/chat_model.dart';
+import 'package:whatsappcloneassignment/pages/personalchatscreen.dart';
 
 class CustomCard extends StatelessWidget {
+  final ChatModel chatModel;
+  CustomCard({required this.chatModel});
+
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){},
+      onTap: (){
+Navigator.push(context, MaterialPageRoute(builder: (context)=> PersonalChat()));
+      },
       child: Column(
         children: [
           ListTile(
               leading: CircleAvatar(
                 child: SvgPicture.asset(
-                  'assets/groups.svg',
+                  chatModel.isGroup ? 'assets/groups.svg' : 'assets/person.svg',
                   color: Colors.white,
                   height: 36,
                   width: 36,
@@ -19,9 +27,9 @@ class CustomCard extends StatelessWidget {
                 radius: 29,
                 backgroundColor: Colors.blueGrey,
               ),
-              trailing: Text('18:04'),
+              trailing: Text(chatModel.time),
               title: Text(
-                'Mehul Saxena',
+               chatModel.name,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
               ),
               subtitle: Row(
@@ -31,7 +39,7 @@ class CustomCard extends StatelessWidget {
                     width: 3,
                   ),
                   Text(
-                    'Hey Mehul! Your Order is ready',
+                    chatModel.currentMessage,
                     style: TextStyle(fontSize: 13),
                   ),
                 ],
