@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsappcloneassignment/UI_files.dart';
 
 class ChatPage extends StatefulWidget{
 
@@ -14,6 +15,13 @@ class _ChatPageState extends State<ChatPage> {
       onPressed: (){},
       child: Icon(Icons.chat),
     ),
+      body: ListView(
+        children: [
+          CustomCard(),
+          CustomCard(),
+          CustomCard(),
+        ],
+      ),
     );
 
   }
