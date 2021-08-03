@@ -23,8 +23,21 @@ class SendImage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 1.0,right: 1.0,bottom: 1,top: 1),
                 child: Image.asset('assets/msg1.jpg',fit: BoxFit.cover,),
                 ),
-
-
+              Positioned(
+                bottom: 4,
+                right: 10,
+                child: Row(
+                  children: [
+                    Text(
+                      '20:12',
+                      style: TextStyle(fontSize: 12, color: Colors.grey),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
