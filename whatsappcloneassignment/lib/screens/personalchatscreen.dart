@@ -72,8 +72,8 @@ class _PersonalChatState extends State<PersonalChat> {
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      'Last seen today at 23:08',
-                      style: TextStyle(fontSize: 11),
+                      'tap here for group info',
+                      style: TextStyle(fontSize: 11,fontWeight: FontWeight.w400),
                     )
                   ],
                 ),
