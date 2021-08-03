@@ -29,7 +29,7 @@ class SendImage extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      '20:12',
+                      '20:19',
                       style: TextStyle(fontSize: 12, color: Colors.grey),
                     ),
                     SizedBox(

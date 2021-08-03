@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class SendMessage extends StatelessWidget {
 
   final String message;
-  SendMessage({required this.message});
+  final String Time;
+  SendMessage({required this.Time,required this.message});
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -29,7 +30,7 @@ class SendMessage extends StatelessWidget {
                  right: 10,
                  child: Row(
                    children: [
-                     Text('20:12',style: TextStyle(fontSize: 12,color: Colors.grey),),
+                     Text(Time,style: TextStyle(fontSize: 12,color: Colors.grey),),
                      SizedBox(
                        width: 5,
                      ),

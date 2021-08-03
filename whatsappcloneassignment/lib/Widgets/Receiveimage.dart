@@ -31,7 +31,7 @@ class ReceiveImage extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      '20:12',
+                      '20:10',
                       style: TextStyle(fontSize: 12, color: Colors.grey),
                     ),
                     SizedBox(
